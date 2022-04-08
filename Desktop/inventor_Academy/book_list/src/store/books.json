@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "title": "Harry Potter part 1",
+    "isRead": false
+  },
+  {
+    "id": "2",
+    "title": "Harry Potter part 2",
+    "isRead": false
+  },
+  {
+    "id": "3",
+    "title": "Harry Potter part 3",
+    "isRead": false
+  },
+  {
+    "id": "4",
+    "title": "Harry Potter part 4",
+    "isRead": false
+  },
+  {
+    "id": "5",
+    "title": "Harry Potter part 5",
+    "isRead": false
+  },
+  {
+    "id": "6",
+    "title": "Harry Potter part 6",
+    "isRead": false
+  }
+]

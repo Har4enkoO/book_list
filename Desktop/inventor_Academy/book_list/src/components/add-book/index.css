@@ -1,0 +1,22 @@
+.add-book-form {
+  display: flex;
+  justify-content: space-around;
+  margin: 60px 0;
+  width: 80%;  
+}
+
+.add-book-input {
+  width: 70%;
+  height: 25px;
+  padding: 20px;
+}
+
+.add-book-button {
+  width: 100px;
+  height: 40px;
+  color: #fff;
+  background-color: #149d12;
+  border: none;
+  cursor: pointer;
+}
+

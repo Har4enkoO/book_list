@@ -1,0 +1,32 @@
+.statistic {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.statistic-data {
+  display: flex;
+  width: 70%;
+  margin-bottom: 20px;
+}
+
+.statistic-data div {
+  margin-right: 20px;
+}
+
+.read {
+  color: rgb(0, 255, 0);
+}
+
+.not-read {
+  color: rgb(255, 0, 0);
+}
+
+.remove-all-button {
+  width: 100px;
+  height: 25px;
+  background-color: rgb(255, 0, 0);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
