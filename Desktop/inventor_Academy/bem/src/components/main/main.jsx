@@ -23,7 +23,7 @@ export const Main = () => {
         <div className="main__picture">
           <img
             src={require("../../assets/main1.png")}
-            alt="Food"
+            alt="img"
           />
           <h2 className="main__picture__left main__picture__title">
             Webdesing Agentur
@@ -54,7 +54,7 @@ export const Main = () => {
         <div className="main__picture__right">
           <img
             src={require("../../assets/main2.png")}
-            alt="Girl"
+            alt="img"
           />
           <h2 className="main__picture__title">Webdesing Agentur</h2>
         </div>
@@ -63,7 +63,7 @@ export const Main = () => {
         <div className="main__picture">
           <img
             src={require("../../assets/main3.png")}
-            alt="planet"
+            alt="img"
           />
           <h2 className="main__picture__title">Webdesing Agentur</h2>
         </div>
@@ -92,7 +92,7 @@ export const Main = () => {
         <div className="main__picture__right">
           <img
             src={require("../../assets/main4.png")}
-            alt="Spring"
+            alt="img"
           />
           <h2 className="main__picture__title">Webdesing Agentur</h2>
         </div>
