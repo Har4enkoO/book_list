@@ -2,7 +2,7 @@ import React from "react";
 
 import './style.css'
 
-export const Card = () => {
+export const TextCard = () => {
   return (
     <article className="main__card">
       <div className="main__card__wrapper">

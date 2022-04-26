@@ -1,6 +1,7 @@
 import React from "react";
 
-import { Card } from "../card/card";
+import { TextCard } from "../textCard/textCard";
+import { PictureCard } from "../pictureCard/pictureCard";
 
 import "./style.css";
 
@@ -11,7 +12,6 @@ export const Main = () => {
         <div className="main__title__picture__opacity"></div>
       </section>
       <div className="main__title">
-        <div className="main__title__background"></div>
         <div>
           <h1>Referenzen</h1>
           <p>
@@ -22,32 +22,20 @@ export const Main = () => {
         </div>
       </div>
       <section className="main__section">
-        <div className="main__picture">
-          <img src={require("../../assets/main1.png")} alt="img" />
-          <h2 className="main__picture__title">Webdesing Agentur</h2>
-        </div>
-        <Card />
+        <PictureCard styles="main__picture" picture="main1" />
+        <TextCard />
       </section>
       <section className="main__section">
-        <Card />
-        <div className="main__picture__right">
-          <img src={require("../../assets/main2.png")} alt="img" />
-          <h2 className="main__picture__title">Webdesing Agentur</h2>
-        </div>
+        <TextCard />
+        <PictureCard styles="main__picture__right" picture="main2" />
       </section>
       <section className="main__section">
-        <div className="main__picture">
-          <img src={require("../../assets/main3.png")} alt="img" />
-          <h2 className="main__picture__title">Webdesing Agentur</h2>
-        </div>
-        <Card />
+        <PictureCard styles="main__picture" picture="main3" />
+        <TextCard />
       </section>
       <section className="main__section">
-        <Card />
-        <div className="main__picture__right">
-          <img src={require("../../assets/main4.png")} alt="img" />
-          <h2 className="main__picture__title">Webdesing Agentur</h2>
-        </div>
+        <TextCard />
+        <PictureCard styles="main__picture__right" picture="main4" />
       </section>
     </main>
   );
