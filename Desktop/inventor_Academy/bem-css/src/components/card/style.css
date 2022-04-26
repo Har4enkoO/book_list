@@ -1,4 +1,4 @@
-.main__article {
+.main__card {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -11,15 +11,15 @@
   box-shadow: 4px 4px 20px rgba(226, 226, 226, 0.59);
 }
 
-.main__article__wrapper {
+.main__card__wrapper {
   text-align: left;
 }
 
-.main__article__title {
+.main__card__title {
   text-align: left;
 }
 
-.main__article__title__p {
+.main__card__text {
   width: 538px;
   height: 155px;
 }
