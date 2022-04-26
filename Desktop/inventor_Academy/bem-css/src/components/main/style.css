@@ -68,29 +68,3 @@
   justify-content: center;
   align-items: center;
 }
-
-.main__article {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #6279ff;
-  color: #ffffff;
-  width: 720px;
-  height: 353px;
-  background: #6279ff;
-  box-shadow: 4px 4px 20px rgba(226, 226, 226, 0.59);
-}
-
-.main__article__wrapper {
-  text-align: left;
-}
-
-.main__article__title {
-  text-align: left;
-}
-
-.main__article__title__p {
-  width: 538px;
-  height: 155px;
-}

@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Card } from "../card/card";
+
 import "./style.css";
 
 export const Main = () => {
@@ -21,79 +23,29 @@ export const Main = () => {
       </div>
       <section className="main__section">
         <div className="main__picture">
-          <img
-            src={require("../../assets/main1.png")}
-            alt="img"
-          />
-          <h2 className="main__picture__left main__picture__title">
-            Webdesing Agentur
-          </h2>
+          <img src={require("../../assets/main1.png")} alt="img" />
+          <h2 className="main__picture__title">Webdesing Agentur</h2>
         </div>
-        <article className="main__article">
-          <div className="main__article__wrapper">
-            <h2 className="main__article__title">Webdesing Agentur</h2>
-            <p className="main__article__title__p">
-              Wir sind ein wirksames Team von Programmiern und Designer und
-              bieten professionelle Dienstlei stungen rund um's Thema Webdesing
-              und Online-Marketing an. Seint 2006 kultivieren wir
-            </p>
-          </div>
-        </article>
+        <Card />
       </section>
       <section className="main__section">
-        <article className="main__article">
-          <div className="main__article__wrapper">
-            <h2 className="main__article__title">Webdesing Agentur</h2>
-            <p className="main__article__title__p">
-              Wir sind ein wirksames Team von Programmiern und Designer und
-              bieten professionelle Dienstlei stungen rund um's Thema Webdesing
-              und Online-Marketing an. Seint 2006 kultivieren wir
-            </p>
-          </div>
-        </article>
+        <Card />
         <div className="main__picture__right">
-          <img
-            src={require("../../assets/main2.png")}
-            alt="img"
-          />
+          <img src={require("../../assets/main2.png")} alt="img" />
           <h2 className="main__picture__title">Webdesing Agentur</h2>
         </div>
       </section>
       <section className="main__section">
         <div className="main__picture">
-          <img
-            src={require("../../assets/main3.png")}
-            alt="img"
-          />
+          <img src={require("../../assets/main3.png")} alt="img" />
           <h2 className="main__picture__title">Webdesing Agentur</h2>
         </div>
-        <article className="main__article">
-          <div className="main__article__wrapper">
-            <h2 className="main__article__title">Webdesing Agentur</h2>
-            <p className="main__article__title__p">
-              Wir sind ein wirksames Team von Programmiern und Designer und
-              bieten professionelle Dienstlei stungen rund um's Thema Webdesing
-              und Online-Marketing an. Seint 2006 kultivieren wir
-            </p>
-          </div>
-        </article>
+        <Card />
       </section>
       <section className="main__section">
-        <article className="main__article">
-          <div className="main__article__wrapper">
-            <h2 className="main__article__title">Webdesing Agentur</h2>
-            <p className="main__article__title__p">
-              Wir sind ein wirksames Team von Programmiern und Designer und
-              bieten professionelle Dienstlei stungen rund um's Thema Webdesing
-              und Online-Marketing an. Seint 2006 kultivieren wir
-            </p>
-          </div>
-        </article>
+        <Card />
         <div className="main__picture__right">
-          <img
-            src={require("../../assets/main4.png")}
-            alt="img"
-          />
+          <img src={require("../../assets/main4.png")} alt="img" />
           <h2 className="main__picture__title">Webdesing Agentur</h2>
         </div>
       </section>
