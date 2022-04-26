@@ -1,0 +1,175 @@
+.container {
+  width: 100%;
+  padding-bottom: 100px;
+  background-color: #fbfbfb;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.text {
+  margin: 70px auto 0;
+  color: #818181;
+  font-size: 18px;
+  font-weight: 500;
+}
+.form_container {
+  width: 80%;
+  height: 560px;
+  position: relative;
+  margin: 60px auto 0;
+  box-shadow: 0 12px 20px rgba(138, 138, 138, 0.15);
+}
+
+.map {
+  position: absolute;
+  left: 0;
+}
+
+.location {
+  position: absolute;
+  left: 350px;
+  top: 350px;
+}
+
+.form_heading {
+  position: absolute;
+  left: 890px;
+  top: 50px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form_inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  right: 100px;
+  bottom: 35px;
+  width: 320px;
+  height: 420px;
+}
+
+.input {
+  height: 35px;
+  border: 1px solid #f8f8f8;
+  box-shadow: 0 2px 12px rgba(138, 138, 138, 0.15);
+  border-radius: 10px;
+}
+
+.input::placeholder {
+  padding-left: 22px;
+  color: #c4c4c4;
+  font-size: 12px;
+}
+
+.input_message::placeholder {
+  padding-left: 23px;
+  padding-top: 7px;
+  color: #c4c4c4;
+  font-size: 12px;
+}
+
+.input_message {
+  @extend .input;
+  height: auto;
+  resize: none;
+}
+
+.send_button {
+  width: 140px;
+  height: 30px;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #0052d4 0%, #4364f7 50%, #6fb1fc 100%);
+  border: none;
+  border-radius: 30px;
+}
+
+.privacy_policy {
+  margin: 0;
+  color: #b1b1b1;
+  font-size: 12px;
+}
+
+.contacts_container {
+  width: 1013px;
+  height: 368px;
+  position: relative;
+  margin: 80px auto 0;
+}
+
+.line {
+  top: 0;
+  margin: 0 auto;
+  width: 110px;
+  background-color: #008dfe;
+}
+
+.contacts {
+  width: 100%;
+  height: 129px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact_phone {
+  width: 169px;
+  padding-left: 30px;
+}
+
+.contact_office {
+  width: 367px;
+  margin: 0 130px;
+  padding-left: 30px;
+}
+
+.contact_mail {
+  width: 217px;
+  padding-left: 30px;
+}
+
+.contact_heading {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.contact_text {
+  display: flex;
+  align-items: center;
+  gap: 6%;
+  color: #818181;
+  font-size: 16px;
+}
+
+.messangers_wrapper {
+  width: 642px;
+  height: 89px;
+  margin: 50px auto 0;
+
+  .heading {
+    margin: 0 auto;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .messangers {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 0;
+    margin: 30px auto 130px;
+  }
+
+  .messanger {
+    display: flex;
+    align-items: center;
+    gap: 8%;
+  }
+}

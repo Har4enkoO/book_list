@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 34px;
+  background-color: #0a0043;
+}
+
+.contacts {
+  display: flex;
+  position: absolute;
+  left: 17%;
+  gap: 8%;
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 8%;
+}
+
+.social {
+  @extend .contacts;
+  right: 200px;
+  left: auto;
+  gap: 20px;
+}
+
+.likesCount {
+  width: 18px;
+  position: absolute;
+  left: 22px;
+  z-index: 1;
+  border-radius: 50%;
+  background-color: #008dfe;
+  font-size: 11px;
+  text-align: center;
+}
