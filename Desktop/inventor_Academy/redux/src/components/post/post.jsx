@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-
-import { deleteTodo, updateTodo } from "../../store/actions/actions";
 
 import Grid from "@mui/material/Grid";
 import List from "@mui/material/List";
@@ -12,33 +9,36 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 
-export const TodoItem = ({ todoItem }) => {
-  const dispatch = useDispatch();
+export const Post = ({ post, onDelete }) => {
   const [open, setOpen] = useState(false);
-  const [text, setText] = useState("");
+  const [newTitle, setNewTitle] = useState("");
 
-  const onUpdate = (todoItem) => {
-    const updatedTodo = {
-      title: text,
-      id: todoItem.id,
-    };
-    dispatch(updateTodo(updatedTodo));
+  const onUpdate = async (post, newTitle) => {
+    console.log(post.id, newTitle);
+    await fetch(`https://jsonplaceholder.typicode.com/posts/${post.id}`, {
+      method: "PUT",
+      body: JSON.stringify({
+        id: post.id,
+        title: "newTitle",
+      }),
+      headers: {
+        "Content-Type": "application/json; charset=UTF-8",
+        "Access-Control-Allow-Origin": "*",
+      },
+    });
     setOpen(false);
   };
 
   const onEdit = () => {
     setOpen(true);
-    setText(todoItem.title);
+    setNewTitle(post.title);
   };
 
-  const onDelete = (id) => {
-    dispatch(deleteTodo(id));
-  };
   return (
     <Grid container direction="row" justifyContent="center" alignItems="center">
       <List sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}>
         <ListItem>
-          <Typography sx={{ minWidth: "360px" }}>{todoItem.title}</Typography>
+          <Typography sx={{ minWidth: "360px" }}>{post.title}</Typography>
           <Button onClick={onEdit} variant="outlined" size="small">
             Edit
           </Button>
@@ -46,7 +46,7 @@ export const TodoItem = ({ todoItem }) => {
             variant="outlined"
             color="error"
             size="small"
-            onClick={() => onDelete(todoItem.id)}
+            onClick={() => onDelete(post.id)}
             style={{ float: "right" }}
           >
             Delete
@@ -57,12 +57,12 @@ export const TodoItem = ({ todoItem }) => {
             sx={{ pr: 3 }}
             variant="outlined"
             style={{ width: "600px" }}
-            value={text}
-            onChange={(e) => setText(e.target.value)}
+            value={newTitle}
+            onChange={(e) => setNewTitle(e.target.value)}
           />
           <DialogActions>
             <Button
-              onClick={() => onUpdate(todoItem)}
+              onClick={() => onUpdate(post)}
               variant="contained"
               color="success"
               size="small"

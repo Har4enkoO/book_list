@@ -1,41 +1,29 @@
-import React, { useState } from "react";
-
-import { useDispatch } from "react-redux";
-
-import { addTodo } from "../../store/actions/actions";
+import React from "react";
 
 import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 
-export const InputForm = () => {
-  const [todoItem, setTodoItem] = useState("");
-
-  const dispatch = useDispatch();
-
-  const onAddTodoItem = (e) => {
+export const InputForm = ({ onAdd }) => {
+  const handleOnAdd = (e) => {
     e.preventDefault();
-
-    const newTodoItem = {
-      title: todoItem,
-      id: Date.now() + Math.random(),
-    };
-    dispatch(addTodo(newTodoItem));
-    setTodoItem("");
+    onAdd(e.target.post.value);
+    e.target.post.value = "";
   };
 
   return (
     <Grid container direction="row" justifyContent="center" alignItems="center">
-      <TextField
-        variant="outlined"
-        placeholder="Add todo..."
-        value={todoItem}
-        onChange={(e) => setTodoItem(e.target.value)}
-        required
-      />
-      <Button onClick={onAddTodoItem} variant="contained" color="success">
-        Add Todo
-      </Button>
+      <form onSubmit={handleOnAdd}>
+        <TextField
+          variant="outlined"
+          placeholder="New post..."
+          name="post"
+          required
+        />
+        <Button variant="contained" color="success" type="submit">
+          Add Post
+        </Button>
+      </form>
     </Grid>
   );
 };
