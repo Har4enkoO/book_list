@@ -34,7 +34,7 @@ const AddForm = ({
   const onFormSubmit = (event) => {
     event.preventDefault();
     if (!editMovie) {
-      setMovies([...movies, { id: uuidv4(), title: input, completed: false }]);
+      setMovies([{ id: uuidv4(), title: input, completed: false }, ...movies]);
       setInput("");
     } else {
       updateMovie(input, editMovie.id, editMovie.completed);

@@ -1,36 +1,35 @@
 import FilterBTN from "../FilterBTN";
 
-const Gender = ({ updateGender, updatePageNumber }) => {
-  let genders = ["Female", "Male", "Genderless", "Unknown"].sort();
+const NewCategory = ({ updateField, updatePageNumber, arr, name, id }) => {
   return (
     <div className="accordion-item">
-      <h2 className="accordion-header" id="headingThree">
+      <h2 className="accordion-header" id={`heading${id}`}>
         <button
           className="accordion-button collapsed"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#collapseThree"
+          data-bs-target={`#collapse${id}`}
           aria-expanded="false"
-          aria-controls="collapseThree"
+          aria-controls={`collapse${id}`}
         >
-          Gender
+          {name}
         </button>
       </h2>
       <div
-        id="collapseThree"
+        id={`collapse${id}`}
         className="accordion-collapse collapse"
-        aria-labelledby="headingThree"
+        aria-labelledby={`heading${id}`}
         data-bs-parent="#accordionExample"
       >
         <div className="accordion-body">
-          {genders.map((items, index) => {
+          {arr.map((items, index) => {
             return (
               <FilterBTN
-                name="gender"
+                name={name}
                 index={index}
                 key={index}
                 updatePageNumber={updatePageNumber}
-                task={updateGender}
+                task={updateField}
                 input={items}
               />
             );
@@ -41,4 +40,4 @@ const Gender = ({ updateGender, updatePageNumber }) => {
   );
 };
 
-export default Gender;
+export default NewCategory;

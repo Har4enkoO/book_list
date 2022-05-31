@@ -24,34 +24,33 @@ const MovieList = ({ movies, setMovies, setEditMovie }) => {
   };
 
   return movies.map((movie) => (
-    <>
-      <div className="list-item" key={movies.id}>
-        <input
-          type="text"
-          value={movie.title}
-          className={`list ${movie.completed ? "complete" : ""}`}
-          onChange={(event) => event.preventDefault()}
-        />
-        <button
-          className="button-complete movie-button"
-          onClick={() => handleComplete(movie)}
-        >
-          <i className="fa fa-check-circle"></i>
-        </button>
-        <button
-          className="button-edit movie-button"
-          onClick={() => handleEdit(movie)}
-        >
-          <i className="fa fa-edit"></i>
-        </button>
-        <button
-          className="button-delete movie-button"
-          onClick={() => handleDelete(movie)}
-        >
-          <i className="fa fa-trash"></i>
-        </button>
-      </div>
-    </>
+    <div className="list-item" key={movie.id}>
+      <input
+        type="text"
+        value={movie.title}
+        className={`list ${movie.completed ? "complete" : ""}`}
+        onChange={(event) => event.preventDefault()}
+        key={movies.id}
+      />
+      <button
+        className="button-complete movie-button"
+        onClick={() => handleComplete(movie)}
+      >
+        <i className="fa fa-check-circle"></i>
+      </button>
+      <button
+        className="button-edit movie-button"
+        onClick={() => handleEdit(movie)}
+      >
+        <i className="fa fa-edit"></i>
+      </button>
+      <button
+        className="button-delete movie-button"
+        onClick={() => handleDelete(movie)}
+      >
+        <i className="fa fa-trash"></i>
+      </button>
+    </div>
   ));
 };
 

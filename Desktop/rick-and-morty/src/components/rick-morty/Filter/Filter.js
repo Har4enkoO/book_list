@@ -1,6 +1,20 @@
-import Gender from "./category/Gender";
-import Species from "./category/Species";
-import Status from "./category/Status";
+import NewCategory from "./category/NewCategory";
+
+const genders = ["Female", "Male", "Genderless", "Unknown"].sort();
+const species = [
+  "Human",
+  "Alien",
+  "Humanoid",
+  "Poopybutthole",
+  "Mythological",
+  "Unknown",
+  "Animal",
+  "Disease",
+  "Robot",
+  "Cronenberg",
+  "Planet",
+].sort();
+const status = ["Alive", "Dead", "Unknown"].sort();
 
 const Filter = ({
   updatePageNumber,
@@ -8,7 +22,7 @@ const Filter = ({
   updateGender,
   updateSpecies,
 }) => {
-  let clear = () => {
+  const clear = () => {
     updateStatus("");
     updateGender("");
     updateSpecies("");
@@ -26,17 +40,26 @@ const Filter = ({
         Clear Filters
       </div>
       <div className="accordion" id="accordionExample">
-        <Status
+        <NewCategory
           updatePageNumber={updatePageNumber}
-          updateStatus={updateStatus}
+          updateField={updateGender}
+          arr={genders}
+          name="Gender"
+          id="One"
         />
-        <Species
+        <NewCategory
           updatePageNumber={updatePageNumber}
-          updateSpecies={updateSpecies}
+          updateField={updateSpecies}
+          arr={species}
+          name="Species"
+          id="Two"
         />
-        <Gender
+        <NewCategory
           updatePageNumber={updatePageNumber}
-          updateGender={updateGender}
+          updateField={updateStatus}
+          arr={status}
+          name="Status"
+          id="Three"
         />
       </div>
     </div>
