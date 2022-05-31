@@ -1,3 +1,4 @@
+import { queryAllByAttribute } from "@testing-library/react";
 import React, { useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 
@@ -33,6 +34,10 @@ const AddForm = ({
 
   const onFormSubmit = (event) => {
     event.preventDefault();
+    if (!input.trim()) {
+      setInput("");
+      return alert("empty string");
+    }
     if (!editMovie) {
       setMovies([{ id: uuidv4(), title: input, completed: false }, ...movies]);
       setInput("");
